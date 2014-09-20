@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular Test - Directives and Data Binding</title>
+
+    <link rel="stylesheet" href="../Assets/css/normalize.css"/>
+    <link rel="stylesheet" href="../Assets/css/foundation.min.css"/>
+    <link rel="stylesheet" href="../Assets/css/font-awesome.min.css"/>
+
+</head>
+<body>
+<div class="row-fluid" >
+    <div class="column">
+        <div data-ng-controller="SimpleController">
+            <h1>Name:</h1>
+
+            <input type="text" ng-model="namez"/> {{ namez }}
+
+
+            <ul>
+                <li data-ng-repeat="cust in customers | filter:name | orderBy:'city' "> {{ cust.name | uppercase }} - {{ cust.city | lowercase}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    function SimpleController($scope) {
+        $scope.customers    =   [
+            { name : 'John Doe', city : 'New York'},
+            { name : 'Jane Doe', city : 'Las Vegas'},
+            { name : 'Erica Doe', city : 'Boston'},
+            { name : 'Johns Doe', city : 'Boston'},
+            { name : 'Jaice Doe', city : 'San Francisco'}
+        ];
+
+    }
+</script>
+<script src="../Assets/scripts/angular.js"></script>
+</body>
+</html>
