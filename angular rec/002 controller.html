@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Controllers</title>
+	<script src="../assets/scripts/angular1.0.4.js"></script>
+    <link rel="stylesheet" href="../assets/css/normalize.css"/>
+    <link rel="stylesheet" href="../assets/css/foundation.min.css"/>
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="../assets/css/colorcode.css"/>
+
+</head>
+<body ng-app>
+
+<!--Responding to click events using controllers-->
+<div class="row-fluid" >
+	<div class="column">
+		<div ng-controller="MyCtrl">
+			<div class="frozen fl-16 h-1 prefix">
+				<h1 ng-show="visible">Do you wanna build a snowman?</h1>
+			</div>
+			<button class="btn" ng-click="toggle()">Go away Anna!!</button>
+
+		</div>
+	</div>
+</div>
+
+
+
+<script>
+	function MyCtrl($scope) {
+		$scope.visible = true;
+
+		$scope.toggle = function() {
+			$scope.visible = !$scope.visible;
+		};
+	}
+
+</script>
+</body>
+</html>
