@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Controllers</title>
+	<script src="../assets/scripts/angular1.0.4.js"></script>
+    <link rel="stylesheet" href="../assets/css/normalize.css"/>
+    <link rel="stylesheet" href="../assets/css/foundation.min.css"/>
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="../assets/css/colorcode.css"/>
+
+</head>
+<body ng-app="MyApp">
+
+<!-- changing the input's case to upper case with angualr-->
+<div class="row-fluid" >
+	<div class="column fl-14">
+		<label for="checkbox">
+			<input id="checkbox" type="checkbox" ng-model="visible"/> Toggle me
+		</label>
+		<div show="visible" class="fl-13">
+			<p>Well this is what i said</p>
+		</div>
+	</div>
+</div>
+
+<script>
+	var app = angular.module("MyApp", []);
+	app.directive("show",function(){
+		return{
+			link: function(scope, element, attributes){
+				scope.$watch(attributes.show, function(value){
+					element.css('display',value ? '' : 'none');
+				});
+			}
+		};
+	});
+
+</script>
+
+
+
+</body>
+</html>

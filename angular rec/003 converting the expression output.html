@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Controllers</title>
+	<script src="../assets/scripts/angular1.0.4.js"></script>
+    <link rel="stylesheet" href="../assets/css/normalize.css"/>
+    <link rel="stylesheet" href="../assets/css/foundation.min.css"/>
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="../assets/css/colorcode.css"/>
+
+</head>
+<body ng-app>
+
+<!-- changing the input's case to upper case with angualr-->
+<div class="row-fluid" >
+	<div class="column fl-14">
+		Enter your name: <br/> <input type="text" ng-model="you" />
+		<h2>Hello {{ you | uppercase }}</h2>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
