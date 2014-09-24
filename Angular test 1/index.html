@@ -15,7 +15,7 @@
         <div data-ng-controller="SimpleController">
             <h1>Name:</h1>
 
-            <input type="text" ng-model="namez"/> {{ namez }}
+            <input type="text" ng-model="name"/> {{ name }}
 
 
             <ul>
@@ -30,17 +30,20 @@
 
 
 <script>
-    function SimpleController($scope) {
-        $scope.customers    =   [
-            { name : 'John Doe', city : 'New York'},
-            { name : 'Jane Doe', city : 'Las Vegas'},
-            { name : 'Erica Doe', city : 'Boston'},
-            { name : 'Johns Doe', city : 'Boston'},
-            { name : 'Jaice Doe', city : 'San Francisco'}
-        ];
+	function SimpleController($scope) {
+		$scope.customers    =   [
+			{ name : 'John Doe', city : 'New York'},
+			{ name : 'Jane Doe', city : 'Las Vegas'},
+			{ name : 'Erica Doe', city : 'Boston'},
+			{ name : 'Johns Doe', city : 'Boston'},
+			{ name : 'Jaice Doe', city : 'San Francisco'}
+		];
 
-    }
+
+//		61
+
+	}
 </script>
-<script src="../assets/scripts/angular.js"></script>
+<script src="../assets/scripts/angular.min.js"></script>
 </body>
 </html>
